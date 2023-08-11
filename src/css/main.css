@@ -1212,4 +1212,31 @@ footer .rights {
     margin-left: 40px;
     margin-bottom: 50px;
   }
+}
+@media (max-width: 374px) {
+  header .container .row .menu .menu_item .menu_link {
+    font-size: 43px;
+  }
+  main .container {
+    margin: 0;
+    padding: 0;
+  }
+  main .container .row > * {
+    width: 75%;
+  }
+  main .container .row > * .wrapper_header .header {
+    margin: 0;
+    font-size: 30px;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  .container .row .about_company .about_description {
+    padding: 0;
+  }
+  .main_tasks .container .row .main_left {
+    flex-direction: column;
+    height: 200px;
+  }
 }/*# sourceMappingURL=main.css.map */

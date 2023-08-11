@@ -920,3 +920,61 @@
         }
     }
 }
+
+@media (max-width: 374px) {
+    header {
+        .container {
+            .row {
+                .menu {
+                    .menu_item {
+                        .menu_link {
+                            font-size: 43px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .container {
+            margin: 0;
+            padding: 0;
+
+            .row>* {
+                width: 75%;
+
+                .wrapper_header {
+                    .header {
+                        margin: 0;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+
+        .row {
+            .about_company {
+                .about_description {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .main_tasks {
+        .container {
+            .row {
+                .main_left {
+                    flex-direction: column;
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
