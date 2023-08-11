@@ -1,0 +1,754 @@
+@import 'fonts';
+@import 'mixins';
+
+* {
+	margin: 0;
+	padding: 0;
+	// box-sizing: border-box;
+}
+
+html {
+	font-family: 'TT Hoves', 'Open Sans', 'SF Pro Display', 'Gothic A1', sans-serif;
+}
+
+body {
+	position: relative;
+}
+
+
+.row {
+	margin: 0px;
+}
+
+// style for the header
+
+header {
+	display: flex;
+	align-items: center;
+	height: 102px;
+	position: sticky;
+	z-index: 10;
+	top: 0;
+	width: 100%;
+
+	.container {
+		padding: 0;
+
+		.row {
+			--bs-gutter-x: 0;
+
+			.logo {
+				padding: 0;
+			}
+
+			nav {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding-right: 1.7%;
+
+				.menu_item {
+					list-style-type: none;
+
+					.menu_link {
+						position: relative;
+						color: #333;
+						font-family: TT Hoves;
+						font-size: 12px;
+						line-height: 12px;
+						text-decoration: none;
+						font-weight: 400;
+						letter-spacing: 2.4px;
+						text-transform: uppercase;
+						padding: 3.8px 0 3.8px 0;
+
+						&::before,
+						&::after {
+							content: "";
+							position: absolute;
+							width: 0;
+							height: 1px;
+							background-color: #333;
+							transition: width 0.3s ease;
+						}
+
+						&::before {
+							top: 0;
+							left: 0;
+						}
+
+						&::after {
+							bottom: 0;
+							right: 0;
+						}
+
+						&:hover::before,
+						&:hover::after {
+							width: 100%;
+						}
+					}
+				}
+
+				.hamburger {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// style for the main section
+
+main {
+	min-width: 770px;
+	margin-bottom: 120px;
+
+	.container {
+		.row {
+			padding: 0;
+
+			.wrapper_header {
+				display: flex;
+				flex-direction: column;
+				padding-left: 0;
+
+				h1 {
+					margin-top: 336px;
+					color: #333;
+					font-family: TT Hoves;
+					font-size: 64px;
+					font-weight: 700;
+					line-height: 64px;
+					padding: 0;
+					margin-bottom: 90px;
+
+					span {
+						color: #BDBDBD;
+						font-weight: 300;
+					}
+				}
+
+				.wrapper_arrows {
+					width: 129px;
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 90px;
+
+					.rect {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						height: 53px;
+						width: 53px;
+						border: 1px solid #F2F2F2;
+
+						&:hover {
+							background: #F9F9F9;
+							cursor: pointer;
+						}
+					}
+				}
+
+				.number_wrapper {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					width: 141.879px;
+					height: 31px;
+
+					.number {
+						color: #BDBDBD;
+						font-family: TT Hoves;
+						font-size: 24px;
+						font-weight: 400;
+						line-height: 24px;
+					}
+
+					.divider {
+						text-align: center;
+						width: 43.822px;
+						color: #BDBDBD;
+						font-size: 40px;
+						font-weight: 100;
+						transform: rotate(21deg);
+					}
+				}
+			}
+
+			.img_wrapper {
+				padding: 0;
+				position: relative;
+
+				.main_photo {
+					padding: 0;
+					max-height: 829px;
+					width: 100%;
+				}
+
+				.button {
+					@include button;
+
+					&:hover {
+						background: #F9F9F9;
+						cursor: pointer;
+					}
+				}
+
+
+
+				.button_wrapp {
+
+					span {
+						margin-right: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// about company section
+
+.container {
+
+	.row {
+		width: 100%;
+
+		.about_company {
+			padding: 30px 0 0 0;
+			margin-bottom: 150px;
+			width: 100%;
+			display: flex;
+			min-height: 435px;
+			background: #FBFBFB;
+
+			.about_first {
+				position: relative;
+				margin-left: 100px;
+
+				.about_first_img {
+					width: 90%;
+					height: 285px;
+				}
+
+				.about_second_img {
+					position: absolute;
+					width: 90%;
+					bottom: -30px;
+					left: 0px;
+				}
+			}
+
+			.about_second {
+				margin-top: 30px;
+
+
+				.about_2_photo {
+					width: 95%;
+
+				}
+			}
+
+			.about_description {
+				position: relative;
+				padding-left: 20px;
+
+				.about_subheader {
+					@include subheader;
+					margin-bottom: 28px;
+				}
+
+				.about_text {
+					width: 400px;
+					height: 200px;
+					color: #000;
+					font-family: TT Hoves;
+					font-size: 16px;
+					font-weight: 300;
+					line-height: 27px;
+				}
+
+				.button {
+					@include button;
+					bottom: 30px;
+
+					.button_wrapp {
+						span {
+							margin-right: 12px;
+						}
+					}
+
+					&:hover {
+						background: #F9F9F9;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
+
+// main_task section
+
+.main_tasks {
+	margin-bottom: 120px;
+
+	.container {
+		.row {
+			.main_subheader {
+				@include subheader;
+				margin-bottom: 60px;
+				padding: 0;
+			}
+
+			.main_left {
+				display: flex;
+				align-items: center;
+				height: 144px;
+				padding: 0;
+
+				.number {
+					@include number;
+				}
+
+				.main_descr {
+					@include description;
+				}
+			}
+
+			.main_right {
+				align-items: center;
+				display: flex;
+				height: 144px;
+				padding: 0;
+
+				.number {
+					@include number;
+
+				}
+
+				.main_descr {
+					@include description;
+				}
+			}
+		}
+	}
+}
+
+// our_projects section 
+
+.our_projects {
+	.container {
+		.row {
+			.our_subheader {
+				@include subheader;
+				margin-bottom: 60px;
+				padding: 0;
+			}
+
+			.our_wrapp {
+				padding: 0;
+				position: relative;
+				margin-bottom: 30px;
+
+				.arena {
+					width: 98%;
+					height: 255px;
+				}
+
+				.our_center {
+					position: absolute;
+					top: 48px;
+					left: 79px;
+					width: 413px;
+					color: #FFF;
+					font-family: TT Hoves;
+					font-size: 64px;
+					font-weight: 700;
+					line-height: 64px;
+				}
+
+				.button {
+					@include button;
+					background-color: #ffffff00;
+					color: #FFF;
+					left: 33px;
+					bottom: 20px;
+
+					.button_wrapp {
+						display: flex;
+						align-items: center;
+
+						span {
+							margin-right: 12px;
+						}
+					}
+
+					&:hover {
+						background-color: #ffffff00;
+						cursor: pointer;
+					}
+				}
+			}
+
+			.arena_2 {
+				padding: 0 0 0 20px;
+				height: 255px;
+			}
+
+			.arena_3 {
+				padding-left: 0;
+				padding-right: 15px;
+				height: 255px;
+			}
+
+			.arena_4 {
+				padding-left: 15px;
+				height: 255px;
+			}
+
+			.arena_5 {
+				padding-right: 0;
+				padding-left: 15px;
+				height: 255px;
+			}
+
+			.button {
+				margin-top: 30px;
+				margin-right: 0;
+				padding: 0;
+				@include button;
+				position: relative;
+				background: #333;
+
+				.button_wrapp {
+					display: flex;
+					align-items: center;
+
+					span {
+						margin-right: 12px;
+						color: #FFF;
+					}
+				}
+
+				&:hover {
+					background: #3f3c3c;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+// form section
+
+.form {
+	min-height: 680px;
+
+	.container {
+
+		.form_subheader {
+			@include subheader;
+			margin-top: 120px;
+			width: 521px;
+			text-align: justify;
+		}
+
+		.row {
+			.form {
+				padding: 0;
+
+				.input {
+					height: 46px;
+					width: 95%;
+					border: none;
+					background: #F3F3F3;
+					margin-bottom: 10px;
+					padding-left: 21px;
+					color: #8D8D8D;
+					font-family: TT Hoves;
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+					letter-spacing: 0.56px;
+					outline: none;
+
+					&:hover {
+						background: #e0dede;
+						transition: background 0.3s ease;
+					}
+				}
+
+				.placeholder-box {
+					display: block;
+					position: relative;
+					margin: 0;
+
+					input,
+					textarea {
+						display: block;
+						box-sizing: border-box;
+						width: 100%;
+						height: 46px;
+						border: none;
+						background: #F3F3F3;
+						margin-bottom: 10px;
+						padding-left: 21px;
+						color: #8D8D8D;
+						font-family: TT Hoves;
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+						letter-spacing: 0.56px;
+						outline: none;
+
+						&:invalid+.placeholder-text {
+							display: block;
+						}
+
+						&:hover {
+							background: #e0dede;
+							transition: background 0.3s ease;
+						}
+					}
+
+					.input_field {
+
+						height: 147px;
+						outline: none;
+						padding-top: 14px;
+						resize: none;
+					}
+				}
+
+				.placeholder-text {
+					display: none;
+					width: 100%;
+					font-size: 14px;
+					font-weight: 400;
+					position: absolute;
+					left: 22px;
+					top: 14px;
+					bottom: 0;
+					color: #8D8D8D;
+					cursor: text;
+					user-select: none;
+				}
+
+
+
+				.checkbox {
+					display: flex;
+					align-items: center;
+					color: #333;
+					font-family: TT Hoves;
+					font-size: 14px;
+					font-weight: 400;
+					line-height: normal;
+					letter-spacing: 0.42px;
+					margin-bottom: 21px;
+					margin-top: 19px;
+
+					.custom-checkbox {
+						position: absolute;
+						opacity: 0;
+
+						&+label {
+							display: inline-flex;
+							align-items: center;
+							user-select: none;
+							cursor: pointer;
+						}
+
+						&+label::before {
+							content: '';
+							display: inline-block;
+							width: 24px;
+							height: 23.262px;
+							flex-shrink: 0;
+							flex-grow: 0;
+							border: 1px solid #adb5bd;
+							border-radius: 0.25em;
+							margin-right: 10px;
+							background-repeat: no-repeat;
+							background-position: center center;
+							background-size: 50% 50%;
+							border: none;
+							background-color: #F3F3F3;
+							background-repeat: no-repeat;
+							background-position: center;
+							background-size: contain;
+						}
+
+						&:hover+label:before {
+							background: #e0dede;
+							transition: background 0.3s ease;
+						}
+
+						&:checked+label:before {
+							background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Crect width='24' height='23.2625' rx='4' fill='%23F3F3F3'/%3E%3Cpath d='M7.17224 11.4305C6.7984 11.0823 6.1923 11.0823 5.81846 11.4305C5.44463 11.7787 5.44463 12.3432 5.81846 12.6913L9.20291 15.8434C9.57792 16.1926 10.1863 16.1914 10.5597 15.8406L18.1838 8.67661C18.556 8.3269 18.5533 7.76242 18.1778 7.4158C17.8023 7.06919 17.1962 7.07169 16.824 7.4214L9.87678 13.9493L7.17224 11.4305Z' fill='%23333333'/%3E%3C/svg%3E");
+						}
+					}
+
+
+
+
+
+
+				}
+
+				.subm_btn {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: #333;
+					width: 222px;
+					height: 71px;
+					color: #FFF;
+					font-family: TT Hoves;
+					font-size: 12px;
+					font-weight: 400;
+					line-height: 12px;
+					letter-spacing: 2.4px;
+					text-transform: uppercase;
+					cursor: pointer;
+
+					span {
+						margin-right: 12px;
+					}
+
+					&:hover {
+						background: #3f3c3c;
+					}
+
+
+				}
+			}
+
+			.image {
+				padding: 0 0 0 30px;
+				max-height: 384px;
+			}
+		}
+	}
+}
+
+// footer section
+
+footer {
+	min-height: 420px;
+	background: #2C2C2C;
+	padding: 58px 0 0;
+
+	.container {
+
+		.row {
+
+			.logo {
+				padding: 0;
+				margin-left: -19px;
+			}
+
+			.info_contact {
+				display: flex;
+				justify-content: space-between;
+				text-align: left;
+				padding: 0;
+				margin-bottom: 60px;
+
+				.info {
+					margin-left: 40px;
+
+					h3 {
+						@include footer_subheader;
+						margin-bottom: 25px;
+					}
+
+					.footer_menu {
+						width: 605px;
+						height: 229px;
+						list-style-type: none;
+
+						.menu_item {
+							margin-bottom: 16px;
+
+							.menu_link {
+								color: #FFF;
+								font-family: TT Hoves;
+								font-size: 14px;
+								font-weight: 500;
+								line-height: 24px;
+								letter-spacing: 0.42px;
+								text-decoration: none;
+
+							}
+						}
+					}
+				}
+
+				.contact {
+					padding-right: 110px;
+
+					h3 {
+						@include footer_subheader;
+						margin-bottom: 25px;
+						width: 300px;
+					}
+
+					.contact_wrapp {
+						display: flex;
+						width: 281px;
+						color: #FFF;
+						font-family: TT Hoves;
+						font-size: 14px;
+						font-weight: 500;
+						line-height: 24px;
+						letter-spacing: 0.42px;
+						margin-bottom: 20px;
+
+						img {
+							margin-right: 21px;
+						}
+					}
+				}
+			}
+
+			.social {
+				h3 {
+					@include footer_subheader;
+					margin-bottom: 26px;
+				}
+
+				.social_wrapper {
+					width: 183px;
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+		}
+	}
+
+	hr {
+		stroke-width: 1px;
+		stroke: #FFF;
+		opacity: 0.1;
+		margin-bottom: 30px;
+
+	}
+
+	.rights {
+		color: rgba(200, 200, 200, 0.50);
+		font-family: Open Sans;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 22px;
+		height: 22px;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@import 'media';
